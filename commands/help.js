@@ -27,10 +27,6 @@ exports.Run = async function Run(caller, command, GUILD) {
         name: lang.help.categories.misc,
         value: '',
       },
-      {
-        name: lang.help.linksTitle,
-        value: lang.help.links,
-      },
     ],
   };
   commands.forEach((file) => {
