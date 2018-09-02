@@ -5,6 +5,10 @@ const logger = require('disnode-logger');
 const Zira = require('./Zira.js');
 const ClusterManager = require('./src/clusterManager.js');
 
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config(); // eslint-disable-line global-require
+}
+
 process.on('uncaughtException', (err) => {
   logger.Error('Cluster', 'Error', err);
 });

@@ -4,7 +4,8 @@
     "sourceType": "script"
   },
   "rules": {
-    "valid-jsdoc": ["error",
+    "valid-jsdoc": [
+      "error",
       {
         "requireReturn": false,
         "requireReturnDescription": false,
@@ -23,9 +24,14 @@
       }
     ],
     "indent": "off",
-    "strict": ["error", "safe"],
+    "strict": [
+      "error",
+      "safe"
+    ],
     "linebreak-style": "off",
-    "no-restricted-syntax": ["off"],
+    "no-restricted-syntax": [
+      "off"
+    ],
     "no-console": "off",
     "no-plusplus": "off",
     "max-len": "off",

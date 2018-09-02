@@ -19,5 +19,9 @@ RUN apk add --no-cache --virtual .gyp \
 # Bundle app source
 COPY . .
 
+# install lang files for zira
+RUN git submodule init
+RUN git submodule update
+
 # EXPOSE 8080
 CMD [ "npm", "start" ]
