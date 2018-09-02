@@ -19,7 +19,7 @@ exports.Run = async function Run(caller, command, GUILD) {
         embed: {
           color: caller.color.blue,
           title: lang.title,
-          description: `**${command.prefix}${lang.delete.help[0]}${command.prefix}${lang.delete.help[1]}${command.prefix}${lang.delete.help[2]}\n\n${lang.example}${command.prefix}delete ${command.msg.id} Updates\n${command.prefix}delete ${command.msg.id} <@&${ROLES[caller.utils.randomNumber(0, ROLES.length - 1)].id}>\n[${lang.guide}](https://zira.pw/guide/remove)`,
+          description: `**${command.prefix}${lang.delete.help[0]}${command.prefix}${lang.delete.help[1]}${command.prefix}${lang.delete.help[2]}\n\n${lang.example}${command.prefix}delete ${command.msg.id} Updates\n${command.prefix}delete ${command.msg.id} <@&${ROLES[caller.utils.randomNumber(0, ROLES.length - 1)].id}>`,
         },
       }).catch(console.error);
       return;

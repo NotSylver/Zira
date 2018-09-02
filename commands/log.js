@@ -18,7 +18,7 @@ exports.Run = async function Run(caller, command, GUILD) {
         embed: {
           title: lang.title,
           color: caller.color.blue,
-          description: `**${command.prefix}${lang.log.help[0]}${command.prefix}${lang.log.help[1]}\n\n[${lang.guide}](https://zira.pw/guide/log)`,
+          description: `**${command.prefix}${lang.log.help[0]}${command.prefix}${lang.log.help[1]}`,
         },
       }).catch(console.error);
     } else {

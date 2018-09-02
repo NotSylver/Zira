@@ -47,7 +47,7 @@ class Zira {
     this.bot.on('ready', () => {
       this.Logger.Success(this.bot.user.username, 'Cluster Ready', `Cluster ${this.id}`);
       this.bot.editStatus({
-        name: `${process.env.PREFIX}help | zira.pw`,
+        name: `${process.env.PREFIX}help`,
         type: 0,
       });
       setInterval(this.utils.postStats, 5000, this);
@@ -177,41 +177,41 @@ class Zira {
 
     process.on('message', (data) => {
       switch (data.name) {
-        case 'return':
-          this.ipc.emit(data.id, {
-            cluster: data.cluster,
-            data: data.data,
-          });
-          break;
-        case 'guild':
-          {
-            const guild = this.bot.guilds.get(data.value);
-            if (!guild) return;
-            const guildObj = guild;
-            guildObj.channels = this.utils.mapObj(guild.channels);
-            guildObj.roles = this.utils.mapObj(guild.roles);
-            guildObj.members = this.utils.mapObj(guild.members);
-            process.send({
-              name: 'return',
-              id: guildObj.id,
-              data: guildObj,
-              cluster: this.id,
-            });
-            break;
-          }
-        case 'user':
-          {
-            const user = this.bot.users.get(data.value);
-            if (!user) return;
-            process.send({
-              name: 'return',
-              id: user.id,
-              data: user,
-              cluster: this.id,
-            });
-            break;
-          }
-        default:
+      case 'return':
+        this.ipc.emit(data.id, {
+          cluster: data.cluster,
+          data: data.data,
+        });
+        break;
+      case 'guild':
+      {
+        const guild = this.bot.guilds.get(data.value);
+        if (!guild) return;
+        const guildObj = guild;
+        guildObj.channels = this.utils.mapObj(guild.channels);
+        guildObj.roles = this.utils.mapObj(guild.roles);
+        guildObj.members = this.utils.mapObj(guild.members);
+        process.send({
+          name: 'return',
+          id: guildObj.id,
+          data: guildObj,
+          cluster: this.id,
+        });
+        break;
+      }
+      case 'user':
+      {
+        const user = this.bot.users.get(data.value);
+        if (!user) return;
+        process.send({
+          name: 'return',
+          id: user.id,
+          data: user,
+          cluster: this.id,
+        });
+        break;
+      }
+      default:
       }
     });
 

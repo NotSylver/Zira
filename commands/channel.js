@@ -19,7 +19,7 @@ exports.Run = async function Run(caller, command, GUILD) {
         embed: {
           color: caller.color.blue,
           title: lang.title,
-          description: `**${command.prefix}${lang.channel.help}\n\n${lang.example}${command.prefix}channel <#${CHANNELS[caller.utils.randomNumber(0, CHANNELS.length - 1)].id}>\n[${lang.guide}](https://zira.pw/guide/channel)`,
+          description: `**${command.prefix}${lang.channel.help}\n\n${lang.example}${command.prefix}channel <#${CHANNELS[caller.utils.randomNumber(0, CHANNELS.length - 1)].id}>`,
         },
       }).catch(console.error);
       return;

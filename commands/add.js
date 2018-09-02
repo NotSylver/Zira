@@ -19,7 +19,7 @@ exports.Run = async function Run(caller, command, GUILD) {
         embed: {
           color: caller.color.blue,
           title: lang.title,
-          description: `**${command.prefix}${lang.add.help}\n\n${lang.example}${command.prefix}add :information_source: Updates\n${command.prefix}add :information_source: Updates, <:thirp:450747331512369152> <@&${ROLES[caller.utils.randomNumber(0, ROLES.length - 1)].id}>\n[${lang.guide}](https://zira.pw/guide/add)`,
+          description: `**${command.prefix}${lang.add.help}\n\n${lang.example}${command.prefix}add :information_source: Updates\n${command.prefix}add :information_source: Updates, <:thirp:450747331512369152> <@&${ROLES[caller.utils.randomNumber(0, ROLES.length - 1)].id}>`,
         },
       }).catch(console.error);
       return;

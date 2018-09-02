@@ -18,7 +18,7 @@ exports.Run = async function Run(caller, command, GUILD) {
         embed: {
           color: caller.color.blue,
           title: lang.title,
-          description: `**${command.prefix}${lang.message.help}\n\n${lang.example}${command.prefix}message ${command.msg.id}\n${command.prefix}message React with :information_source: to get updates.\n[${lang.guide}](https://zira.pw/guide/channel)`,
+          description: `**${command.prefix}${lang.message.help}\n\n${lang.example}${command.prefix}message ${command.msg.id}\n${command.prefix}message React with :information_source: to get updates.`,
         },
       }).catch(console.error);
       return;
