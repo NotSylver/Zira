@@ -23,4 +23,4 @@ Installing Zira is easy. This fork is slightly different from the original Zira 
 
 5. Run `git submodule init` and `git submodule update` to get the language files
 
-6. Start the bot with `pm2 start pm2.json`
+6. Start the bot with `npm start`
