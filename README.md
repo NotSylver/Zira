@@ -15,7 +15,7 @@
 
 3. Run `npm i` to install dependencies 
 
-4. Copy `pm2.example.json` to `pm2.json` and fill in the env variables
+4. Copy `.env.example` to `.env` and fill in the env variables
 
 5. Run `git submodule init` and `git submodule update` to get the language files
 

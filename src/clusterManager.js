@@ -33,38 +33,38 @@ class ClusterManager {
 
     this.cluster.on('message', async (worker, data) => {
       switch (data.name) {
-        case 'user':
-        case 'guild':
-          this.Find(1, data.name, data.id);
-          this.queue.set(data.id, worker.id);
-          break;
-        case 'return':
-          {
-            const queue = this.queue.get(data.id);
-            const requester = this.clusters.get(queue);
-            if (requester) {
-              requester.worker.send({
-                name: 'return',
-                id: data.id,
-                data: data.data,
-                cluster: data.cluster,
-              });
-              this.queue.delete(data.id);
-            }
-            break;
-          }
-        case 'stats':
-          this.stats[data.data.cluster] = data.data;
-          break;
-        case 'getStats':
-          worker.send({
+      case 'user':
+      case 'guild':
+        this.Find(1, data.name, data.id);
+        this.queue.set(data.id, worker.id);
+        break;
+      case 'return':
+      {
+        const queue = this.queue.get(data.id);
+        const requester = this.clusters.get(queue);
+        if (requester) {
+          requester.worker.send({
             name: 'return',
             id: data.id,
-            data: this.stats,
-            cluster: 'master',
+            data: data.data,
+            cluster: data.cluster,
           });
-          break;
-        default:
+          this.queue.delete(data.id);
+        }
+        break;
+      }
+      case 'stats':
+        this.stats[data.data.cluster] = data.data;
+        break;
+      case 'getStats':
+        worker.send({
+          name: 'return',
+          id: data.id,
+          data: this.stats,
+          cluster: 'master',
+        });
+        break;
+      default:
       }
     });
   }

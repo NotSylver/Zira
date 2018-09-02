@@ -37,7 +37,7 @@ class CommandHandler extends EventEmitter {
     return this.prefix;
   }
 
-   GetParams(raw) {
+  GetParams(raw) {
     const parms = [];
     let lastSpace = -1;
     let end = false;
@@ -74,7 +74,7 @@ class CommandHandler extends EventEmitter {
     return parms;
   }
 
-   Sanitize(string) {
+  Sanitize(string) {
     let str = string;
     while (str.indexOf('../') !== -1) {
       str = str.replace('../', '');
@@ -191,6 +191,6 @@ class CommandHandler extends EventEmitter {
       this.emit('command', command);
       this.commands++;
     }
-}
+  }
 }
 module.exports = CommandHandler;
