@@ -4,13 +4,11 @@
   "description": "Zira is a reaction role Discord bot that allows users to give themselves roles by reacting on messages with an emoji/emote.",
   "main": "Zira.js",
   "scripts": {
-    "start": "pm2 start pm2.json && pm2 log",
-    "restart": "pm2 delete Zira && pm2 start pm2.json && pm2 log",
-    "stop": "pm2 delete Zira"
+    "start": "node Cluster.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ZiraDiscord/Zira.git"
+    "url": "git+https://github.com/NotSylver/Zira.git"
   },
   "keywords": [
     "discord",
