@@ -35,9 +35,6 @@ exports.Run = async function Run(caller, command) {
     caller.utils.message(command.msg.channel.id, `\`\`\`prolog\n${table(arr)}\n\`\`\``).catch(console.error);
     return;
   }
-  const [cl] = await caller.db.Find('changelog', {
-    id: 0,
-  });
   let guilds = 0;
   Object.keys(res.stats).forEach((key) => {
     guilds += res.stats[key].guilds.length;
@@ -46,10 +43,6 @@ exports.Run = async function Run(caller, command) {
     embed: {
       color: caller.color.blue,
       fields: [{
-        name: 'Version',
-        inline: true,
-        value: cl.version,
-      }, {
         name: 'Guilds',
         inline: true,
         value: numeral(guilds).format('0,0'),
@@ -67,13 +60,6 @@ exports.Run = async function Run(caller, command) {
       },
     },
   };
-  if (cl.changes) {
-    embed.embed.fields.push({
-      name: 'Changelog',
-      value: cl.changelog,
-      inline: true,
-    });
-  }
   caller.utils.message(command.msg.channel.id, embed).catch(console.error);
 };
 
