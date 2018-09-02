@@ -1,5 +1,9 @@
 # Install Guide
+
+Installing Zira is easy. This fork is slightly different from the original Zira instance, but moving over should only take a few seconjds.
+
 ## Prerequisites
+
 [MongoDB](https://www.mongodb.com/)
 
 [Node JS](https://nodejs.org)
@@ -13,7 +17,7 @@
     ```
 2. Run `npm i -g pm2` to install [PM2](http://pm2.keymetrics.io/)
 
-3. Run `npm i` to install dependencies 
+3. Run `npm i` to install dependencies
 
 4. Copy `.env.example` to `.env` and fill in the env variables
 
