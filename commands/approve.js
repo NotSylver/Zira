@@ -1,6 +1,6 @@
 'use strict';
 
-const snekfetch = require('snekfetch'); // eslint-disable-line
+const superagent = require('superagent'); // eslint-disable-line
 
 exports.Run = async function Run(caller, command, GUILD) {
   if (!command.msg.channel.guild) {

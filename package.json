@@ -34,7 +34,7 @@
     "google-translate-api": "^2.3.0",
     "mongodb": "^3.1.4",
     "numeral": "^2.0.6",
-    "snekfetch": "^4.0.4",
+    "superagent": "^3.8.3",
     "text-table": "^0.2.0",
     "trello": "^0.9.0",
     "uniqid": "^5.0.3"

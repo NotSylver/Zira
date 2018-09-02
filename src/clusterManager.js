@@ -1,7 +1,7 @@
 'use strict';
 
 const logger = require('disnode-logger');
-const snekfetch = require('snekfetch');
+const superagent = require('superagent');
 
 class ClusterManager {
   constructor(cluster, shards, clusters) {
@@ -165,14 +165,14 @@ class ClusterManager {
       count += self.stats[key].guilds.length;
     });
     logger.Info('Cluster', 'Post', `Count: ${count}`);
-    snekfetch.post(`https://discordbots.org/api/bots/${process.env.ID}/stats`)
+    superagent.post(`https://discordbots.org/api/bots/${process.env.ID}/stats`)
       .set('Authorization', process.env.DBL)
       .send({
         server_count: count,
       })
       .then(() => logger.Success('Guild Count', 'DBL', `Guilds: ${count}`))
       .catch(err => console.error('Whoops something went wrong: ', err));
-    snekfetch.post(`https://bots.discord.pw/api/bots/${process.env.ID}/stats`)
+    superagent.post(`https://bots.discord.pw/api/bots/${process.env.ID}/stats`)
       .set('Authorization', process.env.DBOT)
       .send({
         server_count: count,

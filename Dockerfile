@@ -14,14 +14,13 @@ RUN apk add --no-cache --virtual .gyp \
     g++ \
     git \
     && npm install \
-    && apk del .gyp
+    && apk del .gyp \
+    # zira locale files
+    && git submodule init \
+    && git submodule update
 
 # Bundle app source
 COPY . .
-
-# install lang files for zira
-RUN git submodule init
-RUN git submodule update
 
 # EXPOSE 8080
 CMD [ "npm", "start" ]
