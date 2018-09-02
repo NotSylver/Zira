@@ -13,14 +13,13 @@ Installing Zira is easy. This fork is slightly different from the original Zira 
 1. Clone this repo
 
     ```
-    git clone https://github.com/ZiraDiscord/Zira.git
+    git clone https://github.com/NotSylver/zira.git
     ```
-2. Run `npm i -g pm2` to install [PM2](http://pm2.keymetrics.io/)
 
-3. Run `npm i` to install dependencies
+2. Run `npm i` to install dependencies
 
-4. Copy `.env.example` to `.env` and fill in the env variables
+3. Copy `.env.example` to `.env` and fill in the env variables
 
-5. Run `git submodule init` and `git submodule update` to get the language files
+4. Run `git submodule init` and `git submodule update` to get the language files
 
-6. Start the bot with `npm start`
+5. Start the bot with `npm start`
