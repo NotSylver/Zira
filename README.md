@@ -1,6 +1,6 @@
 # Install Guide
 
-Installing Zira is easy. This fork is slightly different from the original Zira instance, but moving over should only take a few seconjds.
+Installing Zira is easy. This fork is slightly different from the original Zira instance, but moving over should only take a few seconds.
 
 ## Prerequisites
 
