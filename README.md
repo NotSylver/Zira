@@ -1,3 +1,7 @@
+# A quick note
+
+It looks like Zira is being revived. This fork was created when Zira was shutting down with no real warning. You should probably use the [official repo](https://github.com/ZiraDiscord/Zira) / [instance](https://discordapp.com/oauth2/authorize?client_id=275813801792634880&permissions=268790848&scope=bot) ᵒʳ ʲᵘˢᵗ ᵘˢᵉ [ᵃᵗˡᵃˢ](https://atlasbot.xyz) ᵇᵉᶜᵃᵘˢᵉ ᶦᵗ ᶜᵃⁿ ᵈᵒ ʳᵉᵃᶜᵗᶦᵒⁿ ʳᵒˡᵉˢ ⁿᵒʷ ᵗᵒᵒ
+
 # Install Guide
 
 Installing Zira is easy. This fork is slightly different from the original Zira instance, but moving over should only take a few seconds.
@@ -12,9 +16,9 @@ Installing Zira is easy. This fork is slightly different from the original Zira 
 
 1. Clone this repo
 
-    ```
-    git clone https://github.com/NotSylver/zira.git
-    ```
+   ```
+   git clone https://github.com/NotSylver/zira.git
+   ```
 
 2. Run `npm i` to install dependencies
 
